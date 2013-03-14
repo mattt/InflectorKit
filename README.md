@@ -5,6 +5,8 @@ InflectorKit
 
 InflectorKit ports the string inflection functionality of [Rails ActiveSupport](https://github.com/rails/rails/blob/master/activesupport/lib/active_support/inflector/inflections.rb) to Foundation.
 
+> InflectorKit joins [FormatterKit](https://github.com/mattt/FormatterKit) & [TransformerKit](https://github.com/mattt/TransformerKit) in providing well-designed APIs for manipulating user-facing content.
+
 ## Usage
 
 ```objective-c
