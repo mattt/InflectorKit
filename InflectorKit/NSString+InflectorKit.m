@@ -33,4 +33,10 @@
     return [[TTTStringInflector defaultInflector] pluralize:self];
 }
 
+- (NSString *)toQuantity:(NSInteger)quantity {
+    NSString *quantitized = quantity == 1 ? [self singularizedString] : [self pluralizedString];
+    
+    return [NSString stringWithFormat:@"%li %@", (long)quantity, quantitized];
+}
+
 @end

@@ -37,4 +37,9 @@
  */
 - (NSString *)pluralizedString;
 
+/**
+ 
+ */
+- (NSString *)toQuantity:(NSInteger)quantity;
+
 @end
