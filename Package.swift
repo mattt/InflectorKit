@@ -8,7 +8,6 @@ let package = Package(
     products: [
         .library(
           name: "InflectorKit",
-          type: .dynamic,
           targets: ["InflectorKit"]
         )
     ],
@@ -16,9 +15,7 @@ let package = Package(
     targets: [
         .target(
             name: "InflectorKit",
-            dependencies: [],
-            path: "InflectorKit",
-            publicHeadersPath: "InflectorKit"
+            dependencies: []
         )
     ]
 )
