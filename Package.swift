@@ -8,6 +8,7 @@ let package = Package(
     products: [
         .library(
           name: "InflectorKit",
+          type: .dynamic,
           targets: ["InflectorKit"]
         )
     ],
