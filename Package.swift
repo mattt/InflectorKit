@@ -15,7 +15,8 @@ let package = Package(
     targets: [
         .target(
             name: "InflectorKit",
-            dependencies: []
+            dependencies: [],
+            path: "InflectorKit"
         )
     ]
 )
