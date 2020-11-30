@@ -8,5 +8,5 @@ FOUNDATION_EXPORT const unsigned char InflectorKitVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <InflectorKit/PublicHeader.h>
 
-#import <InflectorKit/NSString+InflectorKit.h>
-#import <InflectorKit/TTTStringInflector.h>
+#import "NSString+InflectorKit.h"
+#import "TTTStringInflector.h"
