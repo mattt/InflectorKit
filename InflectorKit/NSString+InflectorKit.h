@@ -30,11 +30,11 @@
 /**
  
  */
-- (NSString *)singularizedString;
+- (nonnull NSString *)singularizedString;
 
 /**
  
  */
-- (NSString *)pluralizedString;
+- (nonnull NSString *)pluralizedString;
 
 @end

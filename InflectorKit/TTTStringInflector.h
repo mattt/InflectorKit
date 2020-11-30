@@ -30,7 +30,7 @@
 /**
  
  */
-+ (instancetype)defaultInflector;
++ (nonnull instancetype)defaultInflector;
 
 ///=========================
 /// @name Inflecting Strings
@@ -39,12 +39,12 @@
 /**
  
  */
-- (NSString *)singularize:(NSString *)string;
+- (nonnull NSString *)singularize:(nonnull NSString *)string;
 
 /**
  
  */
-- (NSString *)pluralize:(NSString *)string;
+- (nonnull NSString *)pluralize:(nonnull NSString *)string;
 
 ///===================
 /// @name Adding Rules
@@ -53,24 +53,24 @@
 /**
  
  */
-- (void)addSingularRule:(NSString *)rule
-        withReplacement:(NSString *)replacement;
+- (void)addSingularRule:(nonnull NSString *)rule
+        withReplacement:(nonnull NSString *)replacement;
 
 /**
  
  */
-- (void)addPluralRule:(NSString *)rule
-      withReplacement:(NSString *)replacement;
+- (void)addPluralRule:(nonnull NSString *)rule
+      withReplacement:(nonnull NSString *)replacement;
 
 /**
  
  */
-- (void)addIrregularWithSingular:(NSString *)singular
-                          plural:(NSString *)plural;
+- (void)addIrregularWithSingular:(nonnull NSString *)singular
+                          plural:(nonnull NSString *)plural;
 
 /**
  
  */
-- (void)addUncountable:(NSString *)word;
+- (void)addUncountable:(nonnull NSString *)word;
 
 @end
