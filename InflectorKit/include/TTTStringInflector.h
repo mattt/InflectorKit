@@ -31,7 +31,7 @@ NS_SWIFT_NAME(StringInflector)
 /**
  
  */
-+ (nonnull instancetype)defaultInflector;
+@property(nonnull, readonly, class, strong) TTTStringInflector *defaultInflector;
 
 ///=========================
 /// @name Inflecting Strings
