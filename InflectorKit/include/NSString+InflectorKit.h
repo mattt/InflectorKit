@@ -28,13 +28,14 @@
 @interface NSString (InflectorKit)
 
 /**
- 
+
  */
-- (nonnull NSString *)singularizedString;
+@property(readonly, nonatomic, copy) NSString *singularizedString;
 
 /**
- 
+
  */
-- (nonnull NSString *)pluralizedString;
+@property(readonly, nonatomic, copy) NSString *pluralizedString;
+
 
 @end

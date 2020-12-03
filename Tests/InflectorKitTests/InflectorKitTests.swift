@@ -3,11 +3,11 @@ import XCTest
 
 final class InflectorKitTests: XCTestCase {
     func testPluralization() {
-        XCTAssertEqual("person".pluralized(), "people")
-        XCTAssertEqual("tomato".pluralized(), "tomatoes")
-        XCTAssertEqual("matrix".pluralized(), "matrices")
-        XCTAssertEqual("octopus".pluralized(), "octopi")
-        XCTAssertEqual("fish".pluralized(), "fish")
+        XCTAssertEqual("person".pluralized, "people")
+        XCTAssertEqual("tomato".pluralized, "tomatoes")
+        XCTAssertEqual("matrix".pluralized, "matrices")
+        XCTAssertEqual("octopus".pluralized, "octopi")
+        XCTAssertEqual("fish".pluralized, "fish")
     }
 
     func testCustomPluralization() {
@@ -16,8 +16,8 @@ final class InflectorKitTests: XCTestCase {
         inflector.addIrregular(withSingular: "lol", plural: "lolz")
         inflector.addUncountable("Herokai")
 
-        XCTAssertEqual("iPad Mini".pluralized(), "iPads Mini")
-        XCTAssertEqual("lol".pluralized(), "lolz")
-        XCTAssertEqual("Herokai".pluralized(), "Herokai")
+        XCTAssertEqual("iPad Mini".pluralized, "iPads Mini")
+        XCTAssertEqual("lol".pluralized, "lolz")
+        XCTAssertEqual("Herokai".pluralized, "Herokai")
     }
 }
