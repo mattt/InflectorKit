@@ -20,9 +20,9 @@ final class InflectorKitTests: XCTestCase {
 
     func testStringInflector() {
         let inflector = StringInflector.default
-        inflector.addSingularRule(#"^(MacBook)s (Pro|Air)?$"#, withReplacement: #"$1 $2"#)
-        inflector.addPluralRule(#"^i(Pod|Pad)( Mini)?$"#, withReplacement: #"i$1s$2"#)
-        inflector.addIrregular(withSingular: "lol", plural: "lolz")
+        inflector.addSingularRule(#"^(MacBook)s (Pro|Air)?$"#, replacement: #"$1 $2"#)
+        inflector.addPluralRule(#"^i(Pod|Pad)( Mini)?$"#, replacement: #"i$1s$2"#)
+        inflector.addIrregular(singular: "lol", plural: "lolz")
         inflector.addUncountable("Herokai")
 
         XCTAssertEqual("MacBooks Air".singularized, "MacBook Air")

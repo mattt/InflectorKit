@@ -58,19 +58,22 @@ __attribute__((objc_subclassing_restricted))
  
  */
 - (void)addSingularRule:(NSString *)rule
-        withReplacement:(NSString *)replacement;
+        withReplacement:(NSString *)replacement
+    NS_SWIFT_NAME(addSingularRule(_:replacement:));
 
 /**
  
  */
 - (void)addPluralRule:(NSString *)rule
-      withReplacement:(NSString *)replacement;
+      withReplacement:(NSString *)replacement
+    NS_SWIFT_NAME(addPluralRule(_:replacement:));
 
 /**
  
  */
 - (void)addIrregularWithSingular:(NSString *)singular
-                          plural:(NSString *)plural;
+                          plural:(NSString *)plural
+    NS_SWIFT_NAME(addIrregular(singular:plural:));
 
 /**
  
