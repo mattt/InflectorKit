@@ -17,6 +17,12 @@ let package = Package(
             name: "InflectorKit",
             dependencies: [],
             path: "InflectorKit"
+        ),
+        .testTarget(
+            name: "InflectorKitTests",
+            dependencies: [
+                .target(name: "InflectorKit")
+            ]
         )
     ]
 )
