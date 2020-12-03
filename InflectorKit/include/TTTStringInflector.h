@@ -1,4 +1,4 @@
-// NSString+InflectorKit.h
+// TTTStringInflector.h
 //
 // Copyright (c) 2013 Mattt Thompson (http://mattt.me)
 //
@@ -25,16 +25,52 @@
 /**
  
  */
-@interface NSString (InflectorKit)
+@interface TTTStringInflector : NSObject
 
 /**
  
  */
-- (NSString *)singularizedString;
++ (nonnull instancetype)defaultInflector;
+
+///=========================
+/// @name Inflecting Strings
+///=========================
 
 /**
  
  */
-- (NSString *)pluralizedString;
+- (nonnull NSString *)singularize:(nonnull NSString *)string;
+
+/**
+ 
+ */
+- (nonnull NSString *)pluralize:(nonnull NSString *)string;
+
+///===================
+/// @name Adding Rules
+///===================
+
+/**
+ 
+ */
+- (void)addSingularRule:(nonnull NSString *)rule
+        withReplacement:(nonnull NSString *)replacement;
+
+/**
+ 
+ */
+- (void)addPluralRule:(nonnull NSString *)rule
+      withReplacement:(nonnull NSString *)replacement;
+
+/**
+ 
+ */
+- (void)addIrregularWithSingular:(nonnull NSString *)singular
+                          plural:(nonnull NSString *)plural;
+
+/**
+ 
+ */
+- (void)addUncountable:(nonnull NSString *)word;
 
 @end

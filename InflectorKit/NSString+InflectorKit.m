@@ -25,11 +25,11 @@
 
 @implementation NSString (InflectorKit)
 
-- (NSString *)singularizedString {
+- (nonnull NSString *)singularizedString {
     return [[TTTStringInflector defaultInflector] singularize:self];
 }
 
-- (NSString *)pluralizedString {
+- (nonnull NSString *)pluralizedString {
     return [[TTTStringInflector defaultInflector] pluralize:self];
 }
 
