@@ -22,6 +22,8 @@
 
 #import "TTTStringInflector.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface TTTStringInflectionRule : NSObject
 
 + (instancetype)ruleWithPattern:(NSString *)pattern
@@ -63,7 +65,7 @@
     return self;
 }
 
-+ (nonnull instancetype)defaultInflector {
++ (instancetype)defaultInflector {
     static id _defaultInflector = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -74,7 +76,7 @@
     return _defaultInflector;
 }
 
-- (nonnull NSString *)singularize:(nonnull NSString *)string {
+- (NSString *)singularize:(NSString *)string {
     if ([self.mutableUncountables containsObject:string]) {
         return string;
     }
@@ -92,7 +94,7 @@
     return mutableString;
 }
 
-- (nonnull NSString *)pluralize:(nonnull NSString *)string {
+- (NSString *)pluralize:(NSString *)string {
     if ([self.mutableUncountables containsObject:string]) {
         return string;
     }
@@ -110,16 +112,16 @@
     return mutableString;
 }
 
-- (void)addSingularRule:(nonnull NSString *)rule
-        withReplacement:(nonnull NSString *)replacement
+- (void)addSingularRule:(NSString *)rule
+        withReplacement:(NSString *)replacement
 {
     [self.mutableUncountables removeObject:rule];
 
     [self.mutableSingularRules insertObject:[TTTStringInflectionRule ruleWithPattern:rule options:NSRegularExpressionAnchorsMatchLines | NSRegularExpressionCaseInsensitive | NSRegularExpressionUseUnicodeWordBoundaries replacement:replacement] atIndex:0];
 }
 
-- (void)addPluralRule:(nonnull NSString *)rule
-      withReplacement:(nonnull NSString *)replacement
+- (void)addPluralRule:(NSString *)rule
+      withReplacement:(NSString *)replacement
 {
     [self.mutableUncountables removeObject:rule];
     [self.mutableUncountables removeObject:replacement];
@@ -127,14 +129,14 @@
     [self.mutablePluralRules insertObject:[TTTStringInflectionRule ruleWithPattern:rule options:NSRegularExpressionAnchorsMatchLines | NSRegularExpressionCaseInsensitive | NSRegularExpressionUseUnicodeWordBoundaries replacement:replacement] atIndex:0];
 }
 
-- (void)addIrregularWithSingular:(nonnull NSString *)singular
-                          plural:(nonnull NSString *)plural
+- (void)addIrregularWithSingular:(NSString *)singular
+                          plural:(NSString *)plural
 {
     [self.mutableIrregularPluralsBySingular setObject:plural forKey:singular];
     [self.mutableIrregularPluralsBySingular setObject:[plural capitalizedString] forKey:[singular capitalizedString]];
 }
 
-- (void)addUncountable:(nonnull NSString *)word {
+- (void)addUncountable:(NSString *)word {
     [self.mutableUncountables addObject:word];
 }
 
@@ -268,3 +270,5 @@
 }
 
 @end
+
+NS_ASSUME_NONNULL_END

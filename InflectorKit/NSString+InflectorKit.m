@@ -23,14 +23,18 @@
 #import "NSString+InflectorKit.h"
 #import "TTTStringInflector.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @implementation NSString (InflectorKit)
 
-- (nonnull NSString *)singularizedString {
+- (NSString *)singularizedString {
     return [[TTTStringInflector defaultInflector] singularize:self];
 }
 
-- (nonnull NSString *)pluralizedString {
+- (NSString *)pluralizedString {
     return [[TTTStringInflector defaultInflector] pluralize:self];
 }
 
 @end
+
+NS_ASSUME_NONNULL_END

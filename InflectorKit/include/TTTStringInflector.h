@@ -22,6 +22,8 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
  
  */
@@ -32,7 +34,7 @@ __attribute__((objc_subclassing_restricted))
 /**
  
  */
-@property(nonnull, readonly, class, strong) TTTStringInflector *defaultInflector;
+@property(readonly, class, strong) TTTStringInflector *defaultInflector;
 
 ///=========================
 /// @name Inflecting Strings
@@ -41,12 +43,12 @@ __attribute__((objc_subclassing_restricted))
 /**
  
  */
-- (nonnull NSString *)singularize:(nonnull NSString *)string;
+- (NSString *)singularize:(NSString *)string;
 
 /**
  
  */
-- (nonnull NSString *)pluralize:(nonnull NSString *)string;
+- (NSString *)pluralize:(NSString *)string;
 
 ///===================
 /// @name Adding Rules
@@ -55,24 +57,26 @@ __attribute__((objc_subclassing_restricted))
 /**
  
  */
-- (void)addSingularRule:(nonnull NSString *)rule
-        withReplacement:(nonnull NSString *)replacement;
+- (void)addSingularRule:(NSString *)rule
+        withReplacement:(NSString *)replacement;
 
 /**
  
  */
-- (void)addPluralRule:(nonnull NSString *)rule
-      withReplacement:(nonnull NSString *)replacement;
+- (void)addPluralRule:(NSString *)rule
+      withReplacement:(NSString *)replacement;
 
 /**
  
  */
-- (void)addIrregularWithSingular:(nonnull NSString *)singular
-                          plural:(nonnull NSString *)plural;
+- (void)addIrregularWithSingular:(NSString *)singular
+                          plural:(NSString *)plural;
 
 /**
  
  */
-- (void)addUncountable:(nonnull NSString *)word;
+- (void)addUncountable:(NSString *)word;
 
 @end
+
+NS_ASSUME_NONNULL_END
