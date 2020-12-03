@@ -2,6 +2,14 @@ import XCTest
 @testable import InflectorKit
 
 final class InflectorKitTests: XCTestCase {
+    func testSingularization() {
+        XCTAssertEqual("people".singularized, "person")
+        XCTAssertEqual("tomatoes".singularized, "tomato")
+        XCTAssertEqual("matrices".singularized, "matrix")
+        XCTAssertEqual("octopi".singularized, "octopus")
+        XCTAssertEqual("fish".singularized, "fish")
+    }
+
     func testPluralization() {
         XCTAssertEqual("person".pluralized, "people")
         XCTAssertEqual("tomato".pluralized, "tomatoes")
