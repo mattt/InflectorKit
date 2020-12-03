@@ -25,6 +25,7 @@
 /**
  
  */
+NS_SWIFT_NAME(StringInflector)
 @interface TTTStringInflector : NSObject
 
 /**
