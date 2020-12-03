@@ -1,4 +1,5 @@
 # InflectorKit
+![CI][ci badge]
 
 **Efficiently Singularize and Pluralize Strings**
 
@@ -69,3 +70,5 @@ MIT
 ## Contact
 
 Mattt ([@mattt](https://twitter.com/mattt))
+
+[ci badge]: https://github.com/mattt/InflectorKit/workflows/CI/badge.svg
