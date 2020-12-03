@@ -26,6 +26,7 @@
  
  */
 NS_SWIFT_NAME(StringInflector)
+__attribute__((objc_subclassing_restricted))
 @interface TTTStringInflector : NSObject
 
 /**
