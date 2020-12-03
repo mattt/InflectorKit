@@ -42,14 +42,10 @@ for (NSString *singular in @[@"iPad Mini", @"lol", @"Herokai"]) {
     lol: lolz
     Herokai: Herokai
 
-## Contact
-
-Mattt Thompson
-
-- http://github.com/mattt
-- http://twitter.com/mattt
-- m@mattt.me
-
 ## License
 
-InflectorKit is available under the MIT license. See the LICENSE file for more info.
+MIT
+
+## Contact
+
+Mattt ([@mattt](https://twitter.com/mattt))
