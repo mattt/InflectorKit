@@ -32,7 +32,8 @@ __attribute__((objc_subclassing_restricted))
 @interface TTTStringInflector : NSObject
 
 /**
- 
+ Returns a shared instance of the default inflector,
+ which is initialized with standard pluralization rules for the `en-US` locale.
  */
 @property(readonly, class, strong) TTTStringInflector *defaultInflector;
 
@@ -41,12 +42,16 @@ __attribute__((objc_subclassing_restricted))
 ///=========================
 
 /**
- 
+ Singularizes a given string according to the provided rules.
+
+ @param string The string to singularize.
  */
 - (NSString *)singularize:(NSString *)string;
 
 /**
- 
+ Pluralizes a given string according to the provided rules.
+
+ @param string The string to pluralize.
  */
 - (NSString *)pluralize:(NSString *)string;
 
@@ -55,28 +60,39 @@ __attribute__((objc_subclassing_restricted))
 ///===================
 
 /**
- 
+ Adds a singularization rule.
+
+ @param rule A regular expression pattern on which to match plural expressions.
+ @param replacement The replacement pattern used to substitute matches with their singularized form.
  */
 - (void)addSingularRule:(NSString *)rule
         withReplacement:(NSString *)replacement
     NS_SWIFT_NAME(addSingularRule(_:replacement:));
 
 /**
- 
+ Adds a pluralization rule.
+
+ @param rule A regular expression pattern on which to match singular expressions.
+ @param replacement The replacement pattern used to substitute matches with their pluralized form.
  */
 - (void)addPluralRule:(NSString *)rule
       withReplacement:(NSString *)replacement
     NS_SWIFT_NAME(addPluralRule(_:replacement:));
 
 /**
- 
+ Adds an irregular plural rule.
+
+ @param singular The singular form.
+ @param plural The irregular plural form.
  */
 - (void)addIrregularWithSingular:(NSString *)singular
                           plural:(NSString *)plural
     NS_SWIFT_NAME(addIrregular(singular:plural:));
 
 /**
- 
+ Adds an uncountable plural rule.
+
+ @param word The uncountable word.
  */
 - (void)addUncountable:(NSString *)word;
 

@@ -30,12 +30,18 @@ NS_ASSUME_NONNULL_BEGIN
 @interface NSString (InflectorKit)
 
 /**
-
+ Returns the singularized form of the string
+ according to standard pluralization rules for the `en-US` locale,
+ if one can be determined.
+ Otherwise, returns the original string.
  */
 @property(readonly, nonatomic, copy) NSString *singularizedString;
 
 /**
-
+ Returns the pluralized form of the string
+ according to standard pluralization rules for the `en-US` locale,
+ if one can be determined.
+ Otherwise, returns the original string.
  */
 @property(readonly, nonatomic, copy) NSString *pluralizedString;
 
