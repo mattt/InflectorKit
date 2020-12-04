@@ -6,8 +6,10 @@ final class InflectorKitTests: XCTestCase {
         XCTAssertEqual("people".singularized, "person")
         XCTAssertEqual("tomatoes".singularized, "tomato")
         XCTAssertEqual("matrices".singularized, "matrix")
+        XCTAssertEqual("analyses".singularized, "analysis")
         XCTAssertEqual("octopi".singularized, "octopus")
         XCTAssertEqual("fish".singularized, "fish")
+        XCTAssertEqual("police".singularized, "police")
     }
 
     func testPluralization() {
@@ -16,6 +18,8 @@ final class InflectorKitTests: XCTestCase {
         XCTAssertEqual("matrix".pluralized, "matrices")
         XCTAssertEqual("octopus".pluralized, "octopi")
         XCTAssertEqual("fish".pluralized, "fish")
+        XCTAssertEqual("police".pluralized, "police")
+        XCTAssertEqual("cow".pluralized, "cows")
     }
 
     func testStringInflector() {
