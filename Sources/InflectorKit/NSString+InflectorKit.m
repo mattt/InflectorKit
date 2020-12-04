@@ -1,6 +1,6 @@
-// NSString+InflectorKit.h
+// NSString+InflectorKit.m
 //
-// Copyright (c) 2013 Mattt Thompson (http://mattt.me)
+// Copyright (c) 2013 - 2020 Mattt (https://mat.tt)
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -20,21 +20,21 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <Foundation/Foundation.h>
+#import "NSString+InflectorKit.h"
+#import "TTTStringInflector.h"
 
-/**
- 
- */
-@interface NSString (InflectorKit)
+NS_ASSUME_NONNULL_BEGIN
 
-/**
- 
- */
-- (nonnull NSString *)singularizedString;
+@implementation NSString (InflectorKit)
 
-/**
- 
- */
-- (nonnull NSString *)pluralizedString;
+- (NSString *)singularizedString {
+    return [[TTTStringInflector defaultInflector] singularize:self];
+}
+
+- (NSString *)pluralizedString {
+    return [[TTTStringInflector defaultInflector] pluralize:self];
+}
 
 @end
+
+NS_ASSUME_NONNULL_END

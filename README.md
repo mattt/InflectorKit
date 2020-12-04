@@ -1,5 +1,5 @@
-InflectorKit
-============
+# InflectorKit
+![CI][ci badge]
 
 **Efficiently Singularize and Pluralize Strings**
 
@@ -14,6 +14,14 @@ InflectorKit ports the string inflection functionality of [Rails ActiveSupport](
 
 for (NSString *singular in @[@"person", @"tomato", @"matrix", @"octopus", @"fish"]) {
   NSLog(@"%@: %@", singular, [singular pluralizedString]);
+}
+```
+
+```swift
+import InflectorKit
+
+for singular in ["person", "tomato", "matrix", "octopus", "fish"] {
+    print(singular.pluralized)
 }
 ```
 
@@ -38,18 +46,29 @@ for (NSString *singular in @[@"iPad Mini", @"lol", @"Herokai"]) {
 }
 ```
 
+```swift
+import InflectorKit
+
+let inflector = StringInflector.default
+inflector.addPluralRule(#"^i(Pod|Pad)( Mini)?$"#, replacement: #"i$1s$2"#)
+inflector.addIrregular(singular: "lol", plural: "lolz")
+inflector.addUncountable("Herokai")
+
+for singular in ["iPad Mini", "lol", "Herokai"] {
+    print(singular.pluralized)
+}
+```
+
     iPad Mini: iPads Mini
     lol: lolz
     Herokai: Herokai
 
-## Contact
-
-Mattt Thompson
-
-- http://github.com/mattt
-- http://twitter.com/mattt
-- m@mattt.me
-
 ## License
 
-InflectorKit is available under the MIT license. See the LICENSE file for more info.
+MIT
+
+## Contact
+
+Mattt ([@mattt](https://twitter.com/mattt))
+
+[ci badge]: https://github.com/mattt/InflectorKit/workflows/CI/badge.svg

@@ -1,6 +1,6 @@
-// NSString+InflectorKit.m
+// NSString+InflectorKit.h
 //
-// Copyright (c) 2013 Mattt Thompson (http://mattt.me)
+// Copyright (c) 2013 - 2020 Mattt (https://mat.tt)
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -20,17 +20,32 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "NSString+InflectorKit.h"
-#import "TTTStringInflector.h"
+#import <Foundation/Foundation.h>
 
-@implementation NSString (InflectorKit)
+NS_ASSUME_NONNULL_BEGIN
 
-- (nonnull NSString *)singularizedString {
-    return [[TTTStringInflector defaultInflector] singularize:self];
-}
+/**
+ 
+ */
+@interface NSString (InflectorKit)
 
-- (nonnull NSString *)pluralizedString {
-    return [[TTTStringInflector defaultInflector] pluralize:self];
-}
+/**
+ Returns the singularized form of the string
+ according to standard pluralization rules for the `en-US` locale,
+ if one can be determined.
+ Otherwise, returns the original string.
+ */
+@property(readonly, nonatomic, copy) NSString *singularizedString;
+
+/**
+ Returns the pluralized form of the string
+ according to standard pluralization rules for the `en-US` locale,
+ if one can be determined.
+ Otherwise, returns the original string.
+ */
+@property(readonly, nonatomic, copy) NSString *pluralizedString;
+
 
 @end
+
+NS_ASSUME_NONNULL_END

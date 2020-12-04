@@ -5,8 +5,8 @@ Pod::Spec.new do |s|
   s.summary  = 'Efficiently Singularize and Pluralize Strings.'
   s.homepage = 'https://github.com/mattt/InflectorKit'
   s.social_media_url = 'https://twitter.com/mattt'
-  s.authors  = { 'Mattt Thompson' => 'm@mattt.me' }
+  s.authors  = { 'Mattt' => 'mattt@me.com' }
   s.source   = { :git => 'https://github.com/mattt/InflectorKit.git', :tag => '0.0.1' }
-  s.source_files = 'InflectorKit'
+  s.source_files = 'Sources/InflectorKit'
   s.requires_arc = true
 end
