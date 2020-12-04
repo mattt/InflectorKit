@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name     = 'InflectorKit'
-  s.version  = '0.0.1'
+  s.version  = '1.0.0'
   s.license  = { type: 'MIT', file: 'LICENSE' }
   s.summary  = 'Get the singular and plural forms of English words.'
   s.homepage = 'https://github.com/mattt/InflectorKit'

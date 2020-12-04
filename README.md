@@ -96,7 +96,7 @@ let package = Package(
   dependencies: [
     .package(
         url: "https://github.com/mattt/InflectorKit",
-        from: "0.0.1"
+        from: "1.0.0"
     ),
   ]
 )
@@ -110,7 +110,7 @@ You can install `InflectorKit` via CocoaPods,
 by adding the following line to your `Podfile`:
 
 ```ruby
-pod 'InflectorKit', '~> 0.0.1'
+pod 'InflectorKit', '~> 1.0.0'
 ```
 
 Run the `pod install` command to download the library
