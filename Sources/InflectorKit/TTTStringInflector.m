@@ -180,7 +180,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Inflection rules adapted from Active Support
- Copyright (c) 2005-2012 David Heinemeier Hansson
+ Copyright (c) 2005-2020 David Heinemeier Hansson
 
  Permission is hereby granted, free of charge, to any person obtaining
  a copy of this software and associated documentation files (the
@@ -228,6 +228,8 @@ NS_ASSUME_NONNULL_BEGIN
     [self addSingularRule:@"(ss)$" withReplacement:@"$1"];
     [self addSingularRule:@"(n)ews$" withReplacement:@"$1ews"];
     [self addSingularRule:@"([ti])a$" withReplacement:@"$1um"];
+    [self addSingularRule:@"((a)naly|(b)a|(d)iagno|(p)arenthe|(p)rogno|(s)ynop|(t)he)(sis|ses)$" withReplacement:@"$1sis"];
+    [self addSingularRule:@"(^analy)(sis|ses)$$" withReplacement:@"$1sis"];
     [self addSingularRule:@"([^f])ves$" withReplacement:@"$1fe"];
     [self addSingularRule:@"(hive)s$" withReplacement:@"$1"];
     [self addSingularRule:@"(tive)s$" withReplacement:@"$1"];
@@ -255,7 +257,6 @@ NS_ASSUME_NONNULL_BEGIN
     [self addIrregularWithSingular:@"child" plural:@"children"];
     [self addIrregularWithSingular:@"sex" plural:@"sexes"];
     [self addIrregularWithSingular:@"move" plural:@"moves"];
-    [self addIrregularWithSingular:@"cow" plural:@"cattle"];
     [self addIrregularWithSingular:@"zombie" plural:@"zombies"];
 
     [self addUncountable:@"equipment"];
@@ -267,6 +268,7 @@ NS_ASSUME_NONNULL_BEGIN
     [self addUncountable:@"fish"];
     [self addUncountable:@"sheep"];
     [self addUncountable:@"jeans"];
+    [self addUncountable:@"police"];
 }
 
 @end
