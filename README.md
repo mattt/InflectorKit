@@ -82,6 +82,40 @@ Herokai → Herokai
 */
 ```
 
+## Installation
+
+### Swift Package Manager
+
+Add the InflectorKit package to your target dependencies in `Package.swift`:
+
+```swift
+import PackageDescription
+
+let package = Package(
+  name: "YourProject",
+  dependencies: [
+    .package(
+        url: "https://github.com/mattt/InflectorKit",
+        from: "0.0.1"
+    ),
+  ]
+)
+```
+
+Then run the `swift build` command to build your project.
+
+### CocoaPods
+
+You can install `InflectorKit` via CocoaPods,
+by adding the following line to your `Podfile`:
+
+```ruby
+pod 'InflectorKit', '~> 0.0.1'
+```
+
+Run the `pod install` command to download the library
+and integrate it into your Xcode project.
+
 ## License
 
 MIT
