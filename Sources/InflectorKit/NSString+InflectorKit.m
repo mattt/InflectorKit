@@ -20,8 +20,8 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "NSString+InflectorKit.h"
-#import "TTTStringInflector.h"
+#import "include/NSString+InflectorKit.h"
+#import "include/TTTStringInflector.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
